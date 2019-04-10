@@ -10,7 +10,7 @@ protected:
 	char * shapeName;
 public:
 	//Shape(double x, double y, char * b);
-	Shape(int x, int y, const char *b);
+	Shape(double x, double y, const char *b);
 	~Shape();
 	const Point & getOrigin();
 	const char* getName();

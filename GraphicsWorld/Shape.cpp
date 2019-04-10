@@ -15,7 +15,7 @@ using namespace std;
 //	strcpy_s(shapeName,(len+1), b);
 //}
 
-Shape::Shape(int x, int y, const char *b) :origin(x, y)
+Shape::Shape(double x, double y, const char *b) :origin(x, y)
 {
 	delete[] shapeName;
 	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
