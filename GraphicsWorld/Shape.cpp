@@ -6,17 +6,28 @@
 using namespace std;
 
 
-Shape::Shape(double x, double y, char * b):origin(x,y)
+//Shape::Shape(double x, double y, char * b):origin(x,y)
+//{
+//	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
+//	//printf("%f. and %f\n", len,(double)strlen(b));
+//	shapeName = new char[len+1];
+//	assert(shapeName != 0 && "Fail to initialize shapeName");
+//	strcpy_s(shapeName,(len+1), b);
+//}
+
+Shape::Shape(int x, int y, const char *b) :origin(x, y)
 {
+	delete[] shapeName;
 	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
-	printf("%f. and %f\n", len,(double)strlen(b));
-	shapeName = new char[len+1];
+	//printf("%f. and %f\n", len, (double)strlen(b));
+	shapeName = new char[len + 1];
 	assert(shapeName != 0 && "Fail to initialize shapeName");
-	strcpy_s(shapeName,(len+1), b);
+	strcpy_s(shapeName, (len + 1), b);
 }
 
 Shape::~Shape()
 {
+	cout << "shape dest" << shapeName << endl;
 	if (shapeName) {
 		delete[] shapeName;
 	}

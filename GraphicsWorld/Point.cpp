@@ -48,7 +48,7 @@ void Point::display()
 {
 	cout << "X-coordinate: " << x << endl;
 	cout << "Y-coordinate: " << y << endl;
-	cout << "ID: " << id << endl;
+	//cout << "ID: " << id << endl;
 }
 
 int Point::counter()

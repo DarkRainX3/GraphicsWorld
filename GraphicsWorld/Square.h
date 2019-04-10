@@ -6,8 +6,8 @@ class Square :
 private:
 	double side_a;
 public:
-	Square(double x, double y, double a, char * b);
-	Square(int x, int y, int a, const char[]);
+	//Square(double x, double y, double a, char * b);
+	Square(int x, int y, int a, const char *b);
 	~Square();
 	double area();
 	double perimeter();

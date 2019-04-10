@@ -5,17 +5,19 @@
 #include "Shape.h"
 using namespace std;
 
-Square::Square(double x, double y, double a, char * b):Shape(x,y,b)
+//Square::Square(double x, double y, double a, char * b):Shape(x,y,b)
+//{
+//	side_a = a;
+//}
+
+Square::Square(int x, int y, int a, const char *b) : Shape(x, y, b)
 {
 	side_a = a;
 }
 
-Square::Square(int x, int y, int a, const char[]) : Shape(x, y, b)
-{
-}
-
 Square::~Square()
 {
+	cout << "sq dest" << shapeName << endl;
 }
 
 double Square::area()

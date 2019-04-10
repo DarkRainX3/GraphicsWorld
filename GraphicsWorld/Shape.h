@@ -9,11 +9,12 @@ protected:
 	Point origin;
 	char * shapeName;
 public:
-	Shape(double x, double y, char * b);
+	//Shape(double x, double y, char * b);
+	Shape(int x, int y, const char *b);
 	~Shape();
 	const Point & getOrigin();
 	const char* getName();
-	void display();
+	virtual void display();
 	double distance(Shape& b);
 	static double distance(Shape& a, Shape& b);
 	void move(double dx, double dy);

@@ -19,8 +19,8 @@ void run() {
 	m.display();
 	n.display();
 	cout << "\nThe distance between two points m and n is: " << m.distance(n);
-		// Testing the second version of the function distance.
-		// Put the necessary code in this place
+	// Testing the second version of the function distance.
+	// Put the necessary code in this place
 	cout << "\nTesting Functions in class Square:" << endl;
 	Square s(5, 7, 12, "SQUARE - S");
 	s.display();
@@ -42,14 +42,14 @@ void run() {
 	Rectangle rec2(3, 4, 11, 7, "RECTANGLE rec2");
 	rec2 = a;
 	rec2.display();
-	cout << "\nTesting Functions in class Circle:" << endl;
+	/*cout << "\nTesting Functions in class Circle:" << endl;
 	Circle c(3, 5, 9, "CIRCLE C");
 	c.display();
 	cout << "the area of " << c.getName() << " is: " << c.area() << endl;
 	cout << "the perimeter of " << c.getName() << " is: " << c.perimeter() << endl;
 	d = a.distance(c);
-	cout << "\nThe distance between rectangle a and circle c is: " << d;
-	// YOU MAY ADD ADDITIONAL CODE HERE, IF NEEDED
+	cout << "\nThe distance between rectangle a and circle c is: " << d;*/
+	// YOU MAY ADD ADDITIONAL CODE HERE, IF NEEDED 
 }
 
 int main()
@@ -74,20 +74,20 @@ int main()
 	//e.display();
 	//cout << a.counter() << " "<<b.counter()<<endl;
 	//*******************************************************************//
-	char r[] = "imsquare";
-	char f[] = "rectangle";
-	Square s = Square(1.0, 1.0,6.0, r);
-	s.display();
-	s.move(4, -5);
-	s.display();
-	printf("%s + area is: %f perimeter is: %f\n",s.getName(),s.area(),s.perimeter());
-	Rectangle re = Rectangle(1.0, 1.0, 1.0, 7.0, f);
-	re.display();
-	printf("%s + area is: %f perimeter is: %f\n", re.getName(), re.area(), re.perimeter());
-	Point temp = re.getOrigin();
-	temp.display();
+	//char r[] = "imsquare";
+	//char f[] = "rectangle";
+	//Square s = Square(1.0, 1.0,6.0, r);
+	//s.display();
+	//s.move(4, -5);
+	//s.display();
+	//printf("%s + area is: %f perimeter is: %f\n",s.getName(),s.area(),s.perimeter());
+	//Rectangle re = Rectangle(1.0, 1.0, 1.0, 7.0, f);
+	//re.display();
+	//printf("%s + area is: %f perimeter is: %f\n", re.getName(), re.area(), re.perimeter());
+	//Point temp = re.getOrigin();
+	//temp.display();
 	//*******************************************************************//
-
+	run();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
