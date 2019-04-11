@@ -44,11 +44,6 @@ void Square::setSideA(double a)
 	this->side_a = a;
 }
 
-//Square::Square(double x, double y, double a, char * b):Shape(x,y,b)
-//{
-//	side_a = a;
-//}
-//
 //Square::Square(Square & a) : Shape(a.origin.getX(), a.origin.getY(), a.shapeName)
 //{
 //	this->side_a = a.side_a;

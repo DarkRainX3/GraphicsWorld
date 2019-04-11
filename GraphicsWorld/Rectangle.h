@@ -8,7 +8,6 @@ private:
 public:
 	Rectangle(double x, double y, double a, double b, const char * c);
 	~Rectangle();
-	//Rectangle(double x, double y, double a, double b, char * c);
 	//Rectangle(Rectangle &r);
 	//Rectangle& operator =(Rectangle &a);
 

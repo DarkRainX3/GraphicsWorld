@@ -8,7 +8,6 @@ private:
 public:
 	Square(int x, int y, int a, const char *b);
 	~Square();
-	//Square(double x, double y, double a, char * b);
 	//Square(Square& a);
 	//Square& operator =(Square &a);
 

@@ -113,7 +113,7 @@ int main()
 	//*******************************************************************//
 	//char r[] = "imsquare";
 	//char f[] = "rectangle";
-	//Square s = Square(1.0, 1.0,6.0, r);
+	//Square s(1.0, 1.0,6.0, r);
 	//s.display();
 	//s.move(4, -5);
 	//s.display();

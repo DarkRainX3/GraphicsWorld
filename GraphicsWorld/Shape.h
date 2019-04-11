@@ -11,7 +11,6 @@ protected:
 	void copy(const Shape& s);
 	void destroy();
 public:
-	//Shape(double x, double y, char * b);
 	Shape(double x, double y, const char *b);
 	Shape(Shape&a);
 	Shape& operator=(Shape&a);

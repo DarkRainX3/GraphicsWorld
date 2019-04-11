@@ -33,11 +33,6 @@ void Rectangle::display()
 	origin.display();
 }
 
-//Rectangle::Rectangle(double x, double y, double a, double b, char * c):Square(x,y,a,c)
-//{
-//	side_b = b;
-//}
-//
 //Rectangle::Rectangle(Rectangle & r) : Square(r.origin.getX(), r.origin.getY(), r.getSideA(), r.shapeName)
 //{
 //	//cout << "cpy cons" << endl;

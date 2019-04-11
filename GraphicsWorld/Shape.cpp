@@ -90,12 +90,3 @@ void Shape::move(double dx, double dy)
 	this->origin.setX(ox + dx);
 	this->origin.setY(oy + dy);
 }
-
-//Shape::Shape(double x, double y, char * b):origin(x,y)
-//{
-//	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
-//	//printf("%f. and %f\n", len,(double)strlen(b));
-//	shapeName = new char[len+1];
-//	assert(shapeName != 0 && "Fail to initialize shapeName");
-//	strcpy_s(shapeName,(len+1), b);
-//}

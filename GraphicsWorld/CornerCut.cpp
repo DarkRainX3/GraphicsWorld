@@ -35,13 +35,3 @@ double CornerCut::perimeter()
 	double circ = (1 / 4.0)*Circle::perimeter();
 	return (sq+circ);
 }
-
-//const char * CornerCut::getName()
-//{
-//	return Circle::shapeName;
-//}
-
-//double CornerCut::distance(Shape & b)
-//{
-//	return Circle::distance(b);
-//}
