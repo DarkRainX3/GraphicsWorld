@@ -25,9 +25,28 @@ Shape::Shape(double x, double y, const char *b) :origin(x, y)
 	strcpy_s(shapeName, (len + 1), b);
 }
 
+Shape::Shape(Shape & a):origin(a.origin.getX(),a.origin.getY())
+{
+	delete[] shapeName;
+	double len = (double)strlen(a.shapeName);
+	this->shapeName = new char[len + 1];
+	assert(shapeName != 0 && "Fail to initialize shapeName");
+	strcpy_s(shapeName, (len + 1), a.shapeName);
+}
+
+Shape & Shape::operator=(Shape & a)
+{
+	delete[] shapeName;
+	double len = (double)strlen(a.shapeName);
+	this->shapeName = new char[len + 1];
+	assert(shapeName != 0 && "Fail to initialize shapeName");
+	strcpy_s(shapeName, (len + 1), a.shapeName);
+	return *this;
+}
+
 Shape::~Shape()
 {
-	cout << "shape dest" << shapeName << endl;
+	//cout << "shape dest" << shapeName << endl;
 	if (shapeName) {
 		delete[] shapeName;
 	}
@@ -46,8 +65,9 @@ const char * Shape::getName()
 void Shape::display()
 {
 	cout << "Shape Name: "<< shapeName <<  endl;
-	cout << "X-coordinate: " << origin.getX() << endl;
-	cout << "Y-coordinate: " << origin.getY() << endl;
+	origin.display();
+	/*cout << "X-coordinate: " << origin.getX() << endl;
+	cout << "Y-coordinate: " << origin.getY() << endl;*/
 }
 
 double Shape::distance(Shape & b)

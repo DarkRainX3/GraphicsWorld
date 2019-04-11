@@ -9,10 +9,10 @@ public:
 	//Rectangle(double x, double y, double a, double b, char * c);
 	Rectangle(double x, double y, double a, double b, const char * c);
 	~Rectangle();
-	Rectangle(Rectangle &r);
-	Rectangle& operator =(Rectangle &a);
-	virtual double area();
-	virtual double perimeter();
+	//Rectangle(Rectangle &r);
+	//Rectangle& operator =(Rectangle &a);
+	double area();
+	double perimeter();
 	void display();
 
 	double getSideB() { return side_b; }

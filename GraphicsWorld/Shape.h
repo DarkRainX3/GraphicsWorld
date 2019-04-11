@@ -11,6 +11,8 @@ protected:
 public:
 	//Shape(double x, double y, char * b);
 	Shape(double x, double y, const char *b);
+	Shape(Shape&a);
+	Shape& operator=(Shape&a);
 	~Shape();
 	const Point & getOrigin();
 	const char* getName();
