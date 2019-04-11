@@ -8,8 +8,6 @@ private:
 
 public:
 	CornerCut(double x, double y, double w, double l, double r, const char *b);
-	//CornerCut(CornerCut & a);
-	//CornerCut & operator=(CornerCut &a);
 	~CornerCut();
 
 	void display();

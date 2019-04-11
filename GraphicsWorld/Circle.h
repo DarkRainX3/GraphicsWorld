@@ -7,10 +7,9 @@ private:
 	double radius;
 public:
 	Circle(double x, double y, double r, const char*b);
-	Circle(Circle & a);
-	Circle& operator =(Circle & a);
 	~Circle();
-
+	//Circle(Circle & a);
+	//Circle& operator =(Circle & a);
 	void display();
 	double perimeter();
 	double area();

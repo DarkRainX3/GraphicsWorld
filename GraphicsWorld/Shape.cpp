@@ -5,21 +5,23 @@
 #include <string.h>
 using namespace std;
 
+void Shape::copy(const Shape& s)
+{
+	cout << "shape copy" << endl;
+	double len = (double)strlen(s.shapeName);
+	shapeName = new char[len + 1];
+	assert(shapeName != 0 && "Fail to initialize shapeName");
+	strcpy_s(shapeName, (len + 1), s.shapeName);
+}
 
-//Shape::Shape(double x, double y, char * b):origin(x,y)
-//{
-//	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
-//	//printf("%f. and %f\n", len,(double)strlen(b));
-//	shapeName = new char[len+1];
-//	assert(shapeName != 0 && "Fail to initialize shapeName");
-//	strcpy_s(shapeName,(len+1), b);
-//}
+void Shape::destroy() {
+	delete[] shapeName;
+}
 
 Shape::Shape(double x, double y, const char *b) :origin(x, y)
 {
-	delete[] shapeName;
-	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
-	//printf("%f. and %f\n", len, (double)strlen(b));
+	destroy();
+	double len = (double)strlen(b);
 	shapeName = new char[len + 1];
 	assert(shapeName != 0 && "Fail to initialize shapeName");
 	strcpy_s(shapeName, (len + 1), b);
@@ -27,20 +29,15 @@ Shape::Shape(double x, double y, const char *b) :origin(x, y)
 
 Shape::Shape(Shape & a):origin(a.origin.getX(),a.origin.getY())
 {
-	delete[] shapeName;
-	double len = (double)strlen(a.shapeName);
-	this->shapeName = new char[len + 1];
-	assert(shapeName != 0 && "Fail to initialize shapeName");
-	strcpy_s(shapeName, (len + 1), a.shapeName);
+	destroy();
+	copy(a);
 }
 
 Shape & Shape::operator=(Shape & a)
 {
-	delete[] shapeName;
-	double len = (double)strlen(a.shapeName);
-	this->shapeName = new char[len + 1];
-	assert(shapeName != 0 && "Fail to initialize shapeName");
-	strcpy_s(shapeName, (len + 1), a.shapeName);
+	destroy();
+	copy(a);
+	origin = Point(a.origin.getX(), a.origin.getY());
 	return *this;
 }
 
@@ -93,3 +90,12 @@ void Shape::move(double dx, double dy)
 	this->origin.setX(ox + dx);
 	this->origin.setY(oy + dy);
 }
+
+//Shape::Shape(double x, double y, char * b):origin(x,y)
+//{
+//	double len = (double)strlen(b);// sizeof(b)/sizeof(*b);
+//	//printf("%f. and %f\n", len,(double)strlen(b));
+//	shapeName = new char[len+1];
+//	assert(shapeName != 0 && "Fail to initialize shapeName");
+//	strcpy_s(shapeName,(len+1), b);
+//}

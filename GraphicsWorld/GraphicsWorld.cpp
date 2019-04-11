@@ -10,8 +10,8 @@ using namespace std;
 
 void run() {
 	// =================================== PART 1 =======================================
-	cout << "\nThis program has been written by: student name(s).";
-	cout << "\nSubmitted at: 11:00 pm, February 3 , 2008\n";
+	cout << "\nThis program has been written by: Waley Chen, David Tang";
+	cout << "\nSubmitted at: Apr 11 2019";
 	cout << "\nTesting Functions in class Point:" << endl;
 	Point m(6, 8);
 	Point n(6, 8);
@@ -38,6 +38,9 @@ void run() {
 	cout << "\nTesting copy constructor in class Rectangle:" << endl;
 	Rectangle rec1 = a;
 	rec1.display();
+	cout << "\nTesting copy constructor in class Square:" << endl;
+	Square sq1 = s;
+	sq1.display();
 	cout << "\nTesting assignment operator in class Rectangle:" << endl;
 	Rectangle rec2(3, 4, 11, 7, "RECTANGLE rec2");
 	rec2 = a;
