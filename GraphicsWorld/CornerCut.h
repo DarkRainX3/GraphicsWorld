@@ -13,7 +13,8 @@ public:
 	void display();
 	double area();
 	double perimeter();
-	const char* getName();
-	double distance(Shape& b);
+
+	//const char* getName();
+	//double distance(Shape& b);
 };
 

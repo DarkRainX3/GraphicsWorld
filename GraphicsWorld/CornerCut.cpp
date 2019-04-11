@@ -36,12 +36,12 @@ double CornerCut::perimeter()
 	return (sq+circ);
 }
 
-const char * CornerCut::getName()
-{
-	return Circle::shapeName;
-}
+//const char * CornerCut::getName()
+//{
+//	return Circle::shapeName;
+//}
 
-double CornerCut::distance(Shape & b)
-{
-	return Circle::distance(b);
-}
+//double CornerCut::distance(Shape & b)
+//{
+//	return Circle::distance(b);
+//}
